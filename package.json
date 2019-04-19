@@ -1,6 +1,21 @@
 {
+  "version": "0.0.1",
+  "name": "dotup-raspberrypi-gpio",
+  "author": {
+    "name": "Peter Ullrich",
+    "email": "dotup.software@gmail.com"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "gpio": "dist/Gpio.js"
+  },
+  "dependencies": {
+    "onoff": "^4.1.1",
+    "commander": "^2.20.0",
+    "dotup-ts-types": "^0.1.7",
+    "readline": "^1.3.0"
+  },
   "devDependencies": {
     "dotup-ts-git-wrapper": "^1.0.0",
     "gulp": "^4.0.0",
@@ -39,11 +54,5 @@
     "docs": "typedoc --mode file --out docs src --exclude \"**/*+(index|.spec|.test|.e2e).ts\"",
     "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs",
     "npm-publish": "npm publish"
-  },
-  "version": "0.0.0",
-  "name": "dotup-raspberrypi-gpio",
-  "author": {
-    "name": "Peter Ullrich",
-    "email": "dotup.software@gmail.com"
   }
 }

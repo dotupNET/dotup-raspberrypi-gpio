@@ -1,0 +1,24 @@
+{
+  "production": true,
+  "git": {
+    "userName": "dotupNET",
+    "repositoryName": "dotup-raspberrypi-gpio"
+  },
+  "linux": {
+    "targetPath": "/home/pi/moto/gpio",
+    "app": {
+      "User": "pi",
+      "Group": "pi",
+      "Environment": [
+        "NODE_ENV=production"
+      ],
+      "postCommands": [
+        "sudo chmod +x {bin}",
+        "sudo rm -f /usr/bin/gpio",
+        "sudo ln -s {bin} /usr/bin/gpio",
+        "sudo chown -h {app.User}:{app.Group} /usr/bin/gpio"
+      ]
+    }
+
+  }
+}

@@ -8,13 +8,15 @@
         "NODE_ENV": "development"
       },
       "name": "Launch Program",
-      "program": "${workspaceFolder}/src/sample.ts",
+      "program": "${workspaceFolder}/src/Gpio.ts",
       "outFiles": [
         "${workspaceFolder}/dist/*.js"
       ],
       "skipFiles": [
         "<node_internals>/**/*.js"
-      ]
+      ],
+      "sourceMaps": true,
+      "console": "integratedTerminal"
     },
     {
       "name": "Current TS File",
