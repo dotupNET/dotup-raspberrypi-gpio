@@ -32,7 +32,7 @@ export class Cli {
 
     if (this.current === undefined || this.current.pin !== p) {
       this.closeGpio();
-      this.current = GpioFactory.create(p);
+      this.current = GpioFactory.create(p, false, 0);
     }
   }
 
