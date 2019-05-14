@@ -1,6 +1,7 @@
 import { createInterface, Interface } from 'readline';
 import { GpioFactory } from './Gpio/GpioFactory';
 import { IGpio } from './Gpio/IGpio';
+import { sleep } from 'dotup-ts-types';
 
 export class Cli {
 
@@ -71,6 +72,14 @@ export class Cli {
           await this.write(input[1], input[2]);
           const writeValue = await this.read(input[1])
           console.log(`Pin ${input[1]} is ${writeValue}`);
+          break;
+
+        case 'duration':
+        case 'd':
+          await this.write(input[1], 1);
+          await sleep(Number(input[2]));
+          await this.write(input[1], 0);
+          // console.log(`Pin ${input[1]} is ${writeValue}`);
           break;
 
       }
