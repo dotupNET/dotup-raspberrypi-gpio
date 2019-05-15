@@ -5,15 +5,11 @@ import { IGpio } from './IGpio';
 export class RaspberryGpio implements IGpio {
   private readonly gpio: Gpio;
   readonly pin: number;
-  readonly onValue: BinaryValue;
-  readonly offValue: BinaryValue;
 
-  constructor(pin: number, onValue: BinaryValue) {
-    this.onValue = onValue;
-    this.offValue = onValue === 1 ? 0 : 1;
+  constructor(pin: number, activeLow: boolean) {
     this.pin = pin;
     console.info(`RaspberryGpio: Pin ${pin} initialized`);
-    this.gpio = new Gpio(pin, 'out');
+    this.gpio = new Gpio(pin, 'out', 'none', { activeLow: activeLow });
   }
 
   async on(): Promise<void>;
@@ -28,20 +24,16 @@ export class RaspberryGpio implements IGpio {
   }
 
   async off(): Promise<void> {
-    await this.gpio.write(this.offValue);
+    await this.gpio.write(0);
   }
 
   async set(value: number): Promise<void> {
-    if (value === this.offValue) {
-      await this.gpio.write(this.onValue);
-    } else {
-      await this.gpio.write(this.offValue);
-    }
+    await this.gpio.write(value === 0 ? 0 : 1);
   }
 
   async read(): Promise<boolean> {
     const result = await this.gpio.read();
-    return result === this.onValue;
+    return result === 1;
   }
 
   dispose(): void {

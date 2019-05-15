@@ -6,10 +6,10 @@ import { Environment } from '../Environment.Pi';
 import { BinaryValue } from 'onoff';
 
 export namespace GpioFactory {
-  export function create(pin: number, useConsole: boolean = false, onValue: BinaryValue): IGpio {
+  export function create(pin: number, activeLow: boolean, useConsole: boolean = false): IGpio {
 
     if (Environment.isPi() && !useConsole) {
-      return new RaspberryGpio(pin, onValue);
+      return new RaspberryGpio(pin, activeLow);
     } else {
       return new ConsoleGpio(pin);
     }
