@@ -5,7 +5,7 @@
     "repositoryName": "dotup-raspberrypi-gpio"
   },
   "linux": {
-    "targetPath": "/home/pi/moto/gpio",
+    "targetPath": "/home/pi/moto/ngpio",
     "app": {
       "User": "pi",
       "Group": "pi",
@@ -14,9 +14,9 @@
       ],
       "postCommands": [
         "sudo chmod +x {bin}",
-        "sudo rm -f /usr/bin/gpio",
-        "sudo ln -s {bin} /usr/bin/gpio",
-        "sudo chown -h {app.User}:{app.Group} /usr/bin/gpio"
+        "sudo rm -f /usr/bin/ngpio",
+        "sudo ln -s {bin} /usr/bin/ngpio",
+        "sudo chown -h {app.User}:{app.Group} /usr/bin/ngpio"
       ]
     }
 
