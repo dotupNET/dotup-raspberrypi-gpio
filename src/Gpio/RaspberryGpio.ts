@@ -3,9 +3,9 @@ import { IGpio } from "./IGpio";
 import { GpioMode } from "./GpioMode";
 import { Environment } from "../Environment.Pi";
 // import { Gpio } from "./GpioFake";
-
+// import { Gpio } from "pigpio";
 const Gpio = Environment.isPi() ?
-  require("pigpio") :
+  require("pigpio").Gpio :
   require("./GpioFake")
   ;
 
