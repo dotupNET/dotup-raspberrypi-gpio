@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import commander from 'commander';
-import { Cli } from './Cli';
+import commander from "commander";
+import { Cli } from "./Cli";
 
 const args = commander
-  .option('-p, --pin <gpioPin>', 'GPIO PIN')
-  .option('-w, --write <value>', 'Write gpio pin')
-  .option('-r, --read', 'Read gpio pin')
+  .option("-p, --pin <gpioPin>", "GPIO PIN")
+  .option("-w, --write <value>", "Write gpio pin")
+  .option("-r, --read", "Read gpio pin")
   .parse(process.argv);
 
 const cli = new Cli();
@@ -20,7 +20,7 @@ if (pin) {
   } else if (write !== undefined) {
     cli.write(pin, write);
   } else {
-    console.log('Invalid arguments');
+    console.log("Invalid arguments");
   }
   process.exit(0);
 } else {

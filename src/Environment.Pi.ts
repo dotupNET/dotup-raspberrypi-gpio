@@ -1,26 +1,23 @@
-import fs from 'fs';
-import * as os from 'os';
+import fs from "fs";
+import os from "os";
 
-export namespace Environment {
+export const Environment = {
 
-  export function isPi(): boolean {
+  isPi: (): boolean => {
     try {
-      const cpuInfo = fs.readFileSync('/proc/device-tree/model', { encoding: 'utf8' });
+      const cpuInfo = fs.readFileSync("/proc/device-tree/model", { encoding: "utf8" });
 
       return cpuInfo
         .trim()
         .toUpperCase()
-        .startsWith('RASPBERRY');
+        .startsWith("RASPBERRY");
 
     } catch (error) {
       return false;
     }
-  }
+  },
 
-  // export function isPiCpu(): boolean {
-  //   try {
-
-  export function getHostname(): string {
+  getHostname: (): string => {
     return os.hostname();
   }
 
@@ -46,4 +43,4 @@ export namespace Environment {
   //   }
   // }
 
-}
+};

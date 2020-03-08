@@ -1,20 +1,17 @@
-import { createInterface, Interface } from 'readline';
-import { GpioFactory } from './Gpio/GpioFactory';
-import { IGpio } from './Gpio/IGpio';
-import { sleep } from 'dotup-ts-types';
+import { createInterface, Interface } from "readline";
+import { GpioFactory } from "./Gpio/GpioFactory";
+import { IGpio } from "./Gpio/IGpio";
+import { sleep } from "@dotup/dotup-ts-types";
 
 export class Cli {
 
   rl: Interface;
   current: IGpio;
 
-  constructor() {
-  }
-
   async write(pin: number | string, value: number | string): Promise<void> {
     this.openGpio(pin);
-    const p = typeof pin === 'string' ? Number(pin) : pin;
-    let v = typeof value === 'string' ? Number(value) : value;
+    const p = typeof pin === "string" ? Number(pin) : pin;
+    let v = typeof value === "string" ? Number(value) : value;
     // const gpio = GpioFactory.create(p);
     if (v === undefined) {
       const currentValue = await this.read(pin);
@@ -29,9 +26,9 @@ export class Cli {
   }
 
   openGpio(pin: number | string) {
-    const p = typeof pin === 'string' ? Number(pin) : pin;
+    const p = typeof pin === "string" ? Number(pin) : pin;
 
-    if (this.current === undefined || this.current.pin !== p) {
+    if (this.current === undefined || this.current.PinNo !== p) {
       this.closeGpio();
       this.current = GpioFactory.create(p, true, false);
     }
@@ -54,28 +51,28 @@ export class Cli {
       terminal: true,
       input: process.stdin,
       output: process.stdout,
-      prompt: 'GPIO> '
+      prompt: "GPIO> "
     });
 
-    this.rl.on('line', async line => {
-      const input = line.split(' ');
+    this.rl.on("line", async line => {
+      const input = line.split(" ");
 
       switch (input[0]) {
-        case 'read':
-        case 'r':
-          const value = await this.read(input[1])
+        case "read":
+        case "r":
+          const value = await this.read(input[1]);
           console.log(`Pin ${input[0]} is ${value}`);
           break;
 
-        case 'write':
-        case 'w':
+        case "write":
+        case "w":
           await this.write(input[1], input[2]);
-          const writeValue = await this.read(input[1])
+          const writeValue = await this.read(input[1]);
           console.log(`Pin ${input[1]} is ${writeValue}`);
           break;
 
-        case 'duration':
-        case 'd':
+        case "duration":
+        case "d":
           await this.write(input[1], 1);
           await sleep(Number(input[2]));
           await this.write(input[1], 0);
@@ -87,7 +84,7 @@ export class Cli {
       this.rl.prompt();
     });
 
-    this.rl.on('close', () => {
+    this.rl.on("close", () => {
       process.exit(0);
     });
 

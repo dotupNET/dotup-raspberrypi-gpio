@@ -1,13 +1,13 @@
-import { sleep } from 'dotup-ts-types';
-import { IGpio } from './IGpio';
+import { sleep } from "@dotup/dotup-ts-types";
+import { IGpio } from "./IGpio";
 
 
 export class ConsoleGpio implements IGpio {
-  pin: number;
+  PinNo: number;
   value: boolean;
   constructor(pin: number) {
-    this.pin = pin;
-    console.info(`ConsoleGpio: Pin ${this.pin} initialized`);
+    this.PinNo = pin;
+    console.info(`ConsoleGpio: Pin ${this.PinNo} initialized`);
   }
 
   async on(): Promise<void>;
@@ -16,16 +16,16 @@ export class ConsoleGpio implements IGpio {
   async on(durationMs?: number): Promise<void> {
     this.value = true;
     if (durationMs === undefined) {
-      console.log(`Pin ${this.pin} on`);
+      console.log(`Pin ${this.PinNo} on`);
     } else {
-      console.log(`Pin ${this.pin} on`);
+      console.log(`Pin ${this.PinNo} on`);
       await sleep(durationMs);
       await this.off();
     }
   }
 
   async off(): Promise<void> {
-    console.log(`Pin ${this.pin} off`);
+    console.log(`Pin ${this.PinNo} off`);
     this.value = false;
   }
 
@@ -42,7 +42,7 @@ export class ConsoleGpio implements IGpio {
   }
 
   dispose(): void {
-    console.log(`Pin ${this.pin} disposed`);
+    console.log(`Pin ${this.PinNo} disposed`);
   }
 
 }

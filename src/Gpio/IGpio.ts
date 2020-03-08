@@ -1,7 +1,7 @@
-import { IDisposable } from 'dotup-ts-types';
+import { IDisposable } from "@dotup/dotup-ts-types";
 
 export interface IGpio extends IDisposable {
-  pin: number;
+  PinNo: number;
   on(): Promise<void>;
   // tslint:disable-next-line: unified-signatures
   on(durationMs: number): Promise<void>;
