@@ -1,12 +1,18 @@
 import { sleep } from "@dotup/dotup-ts-types";
 import { IGpio } from "./IGpio";
-import { Gpio } from "pigpio";
 import { GpioMode } from "./GpioMode";
+import { Environment } from "../Environment.Pi";
+// import { Gpio } from "./GpioFake";
+
+const Gpio = Environment.isPi() ?
+  require("pigpio") :
+  require("./GpioFake")
+  ;
 
 export class RaspberryGpio implements IGpio {
   // private readonly gpio: Rpio.
   readonly PinNo: number;
-  gpio: Gpio;
+  gpio: any;
 
   constructor(pin: number, mode: GpioMode) {
     this.PinNo = pin;
@@ -43,7 +49,6 @@ export class RaspberryGpio implements IGpio {
 
   dispose(): void {
     console.info(`RaspberryGpio: Pin ${this.PinNo} disposed`);
-
   }
 
 }

@@ -7,6 +7,8 @@
 ## Installation
 
 ## Configuration
+To get pigpio working:
+sudo chmod u+s /usr/bin/node 
 
 ## Usage
 
