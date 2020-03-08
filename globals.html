@@ -78,6 +78,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class"><a href="classes/cli.html" class="tsd-kind-icon">Cli</a></li>
 								<li class="tsd-kind-class"><a href="classes/consolegpio.html" class="tsd-kind-icon">Console<wbr>Gpio</a></li>
+								<li class="tsd-kind-class"><a href="classes/gpio.html" class="tsd-kind-icon">Gpio</a></li>
+								<li class="tsd-kind-class"><a href="classes/gpiobank.html" class="tsd-kind-icon">Gpio<wbr>Bank</a></li>
+								<li class="tsd-kind-class"><a href="classes/notifier.html" class="tsd-kind-icon">Notifier</a></li>
 								<li class="tsd-kind-class"><a href="classes/raspberrygpio.html" class="tsd-kind-icon">Raspberry<wbr>Gpio</a></li>
 							</ul>
 						</section>
@@ -90,11 +93,25 @@
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#clock_pcm" class="tsd-kind-icon">CLOCK_<wbr>PCM</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#clock_pwm" class="tsd-kind-icon">CLOCK_<wbr>PWM</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#args" class="tsd-kind-icon">args</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#cli" class="tsd-kind-icon">cli</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#pin" class="tsd-kind-icon">pin</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#read" class="tsd-kind-icon">read</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#write" class="tsd-kind-icon">write</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#configureclock" class="tsd-kind-icon">configure<wbr>Clock</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#configuresocketport" class="tsd-kind-icon">configure<wbr>Socket<wbr>Port</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#gettick" class="tsd-kind-icon">get<wbr>Tick</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#hardwarerevision" class="tsd-kind-icon">hardware<wbr>Revision</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#initialize" class="tsd-kind-icon">initialize</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#terminate" class="tsd-kind-icon">terminate</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#tickdiff" class="tsd-kind-icon">tick<wbr>Diff</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -110,12 +127,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="clock_pcm" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> CLOCK_<wbr>PCM</h3>
+					<div class="tsd-signature tsd-kind-icon">CLOCK_<wbr>PCM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L427">src/Gpio/GpioFake.ts:427</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PI_CLOCK_PCM</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="clock_pwm" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> CLOCK_<wbr>PWM</h3>
+					<div class="tsd-signature tsd-kind-icon">CLOCK_<wbr>PWM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L422">src/Gpio/GpioFake.ts:422</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>PI_CLOCK_PWM</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="args" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> args</h3>
 					<div class="tsd-signature tsd-kind-icon">args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Command</span><span class="tsd-signature-symbol"> = commander.option(&quot;-p, --pin &lt;gpioPin&gt;&quot;, &quot;GPIO PIN&quot;).option(&quot;-w, --write &lt;value&gt;&quot;, &quot;Write gpio pin&quot;).option(&quot;-r, --read&quot;, &quot;Read gpio pin&quot;).parse(process.argv)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio.ts#L5">src/Gpio.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio.ts#L5">src/Gpio.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -125,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">cli<span class="tsd-signature-symbol">:</span> <a href="classes/cli.html" class="tsd-signature-type">Cli</a><span class="tsd-signature-symbol"> = new Cli()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio.ts#L11">src/Gpio.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio.ts#L11">src/Gpio.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">pin<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = args.pin &#x3D;&#x3D;&#x3D; undefined ? undefined : Number(args.pin)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio.ts#L13">src/Gpio.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio.ts#L13">src/Gpio.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -145,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = args.read &#x3D;&#x3D;&#x3D; undefined ? false : true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio.ts#L15">src/Gpio.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio.ts#L15">src/Gpio.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -155,9 +202,214 @@
 					<div class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = args.write &#x3D;&#x3D;&#x3D; undefined ? undefined : Number(args.write)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio.ts#L14">src/Gpio.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio.ts#L14">src/Gpio.ts:14</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="configureclock" class="tsd-anchor"></a>
+					<h3>configure<wbr>Clock</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">configure<wbr>Clock<span class="tsd-signature-symbol">(</span>microseconds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, peripheral<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L448">src/Gpio/GpioFake.ts:448</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The configureClock function can be used to configure the sample rate and timing peripheral.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>microseconds: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer specifying the sample rate in microseconds (1, 2, 4, 5, 8, or 10)</p>
+									</div>
+								</li>
+								<li>
+									<h5>peripheral: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer specifying the peripheral for timing (CLOCK_PWM or CLOCK_PCM)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="configuresocketport" class="tsd-anchor"></a>
+					<h3>configure<wbr>Socket<wbr>Port</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">configure<wbr>Socket<wbr>Port<span class="tsd-signature-symbol">(</span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L456">src/Gpio/GpioFake.ts:456</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Configures pigpio to use the specified socket port.
+										The default setting is to use port 8888.
+									If configureSocketPort is called, it must be called before creating Gpio objects.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer specifying the pigpio socket port number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="gettick" class="tsd-anchor"></a>
+					<h3>get<wbr>Tick</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tick<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L473">src/Gpio/GpioFake.ts:473</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the current unsigned 32-bit integer value of the number of microseconds
+										since system boot. This value wraps around the 32-bit space in just over an hour.
+										Use tickDiff() to get the difference between two tick values, to
+										ensure the correct JavaScript operations are used to account for the possibility
+									of overflow.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="hardwarerevision" class="tsd-anchor"></a>
+					<h3>hardware<wbr>Revision</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">hardware<wbr>Revision<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L462">src/Gpio/GpioFake.ts:462</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the Raspberry Pi hardware revision as an unsigned integer. Returns 0
+									if the hardware revision can not be determined.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="initialize" class="tsd-anchor"></a>
+					<h3>initialize</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L432">src/Gpio/GpioFake.ts:432</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initialize the pigpio package</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="terminate" class="tsd-anchor"></a>
+					<h3>terminate</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">terminate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L439">src/Gpio/GpioFake.ts:439</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Terminate the pigpio package</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="tickdiff" class="tsd-anchor"></a>
+					<h3>tick<wbr>Diff</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">tick<wbr>Diff<span class="tsd-signature-symbol">(</span>startTick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, endTick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L484">src/Gpio/GpioFake.ts:484</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the difference in microseconds between the end and start tick counts.
+										The tick counts can be retrieved using getTick(), or may be passed
+									in a GPIO event callback.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>startTick: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The start of the measured interval. An unsigned integer tick value.</p>
+									</div>
+								</li>
+								<li>
+									<h5>endTick: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The end of the measured interval. An unsigned integer tick value.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -168,7 +420,7 @@
 					<div class="tsd-signature tsd-kind-icon">Environment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Environment.Pi.ts#L4">src/Environment.Pi.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Environment.Pi.ts#L4">src/Environment.Pi.ts:4</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -181,7 +433,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Environment.Pi.ts#L20">src/Environment.Pi.ts:20</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Environment.Pi.ts#L20">src/Environment.Pi.ts:20</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -198,7 +450,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Environment.Pi.ts#L6">src/Environment.Pi.ts:6</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Environment.Pi.ts#L6">src/Environment.Pi.ts:6</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -212,7 +464,7 @@
 					<div class="tsd-signature tsd-kind-icon">Gpio<wbr>Factory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio/GpioFactory.ts#L7">src/Gpio/GpioFactory.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFactory.ts#L7">src/Gpio/GpioFactory.ts:7</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -225,7 +477,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/322fe28/src/Gpio/GpioFactory.ts#L8">src/Gpio/GpioFactory.ts:8</a></li>
+										<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFactory.ts#L8">src/Gpio/GpioFactory.ts:8</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -267,10 +519,25 @@
 						<a href="classes/consolegpio.html" class="tsd-kind-icon">Console<wbr>Gpio</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/gpio.html" class="tsd-kind-icon">Gpio</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/gpiobank.html" class="tsd-kind-icon">Gpio<wbr>Bank</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/notifier.html" class="tsd-kind-icon">Notifier</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/raspberrygpio.html" class="tsd-kind-icon">Raspberry<wbr>Gpio</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/igpio.html" class="tsd-kind-icon">IGpio</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#clock_pcm" class="tsd-kind-icon">CLOCK_<wbr>PCM</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#clock_pwm" class="tsd-kind-icon">CLOCK_<wbr>PWM</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#args" class="tsd-kind-icon">args</a>
@@ -286,6 +553,27 @@
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#write" class="tsd-kind-icon">write</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#configureclock" class="tsd-kind-icon">configure<wbr>Clock</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#configuresocketport" class="tsd-kind-icon">configure<wbr>Socket<wbr>Port</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#gettick" class="tsd-kind-icon">get<wbr>Tick</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#hardwarerevision" class="tsd-kind-icon">hardware<wbr>Revision</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#initialize" class="tsd-kind-icon">initialize</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#terminate" class="tsd-kind-icon">terminate</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#tickdiff" class="tsd-kind-icon">tick<wbr>Diff</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#environment" class="tsd-kind-icon">Environment</a>

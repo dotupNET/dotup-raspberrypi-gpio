@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cli | @dotup/raspberrypi-gpio</title>
+	<title>Notifier | @dotup/raspberrypi-gpio</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="cli.html">Cli</a>
+					<a href="notifier.html">Notifier</a>
 				</li>
 			</ul>
-			<h1>Class Cli</h1>
+			<h1>Class Notifier</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Notifier</p>
+						<hr>
+					</div>
+					<p>/**
+					Notification Stream</p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Cli</span>
+						<span class="target">Notifier</span>
 					</li>
 				</ul>
 			</section>
@@ -79,156 +89,196 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="notifier.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="cli.html#current" class="tsd-kind-icon">current</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="cli.html#rl" class="tsd-kind-icon">rl</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="notifier.html#notification_length" class="tsd-kind-icon">NOTIFICATION_<wbr>LENGTH</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="notifier.html#pi_ntfy_flags_alive" class="tsd-kind-icon">PI_<wbr>NTFY_<wbr>FLAGS_<wbr>ALIVE</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="cli.html#closegpio" class="tsd-kind-icon">close<wbr>Gpio</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="cli.html#initialize" class="tsd-kind-icon">initialize</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="cli.html#opengpio" class="tsd-kind-icon">open<wbr>Gpio</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="cli.html#read" class="tsd-kind-icon">read</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="cli.html#write" class="tsd-kind-icon">write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#close" class="tsd-kind-icon">close</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#stop" class="tsd-kind-icon">stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="notifier.html#stream" class="tsd-kind-icon">stream</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="current" class="tsd-anchor"></a>
-					<h3>current</h3>
-					<div class="tsd-signature tsd-kind-icon">current<span class="tsd-signature-symbol">:</span> <a href="../interfaces/igpio.html" class="tsd-signature-type">IGpio</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L10">src/Cli.ts:10</a></li>
-						</ul>
-					</aside>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Notifier<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>bits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="notifier.html" class="tsd-signature-type">Notifier</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L364">src/Gpio/GpioFake.ts:364</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a new Notifier object that contains a stream which provides notifications about state changes on any of GPIOs 0 through 31 concurrently.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>bits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Used to configure which GPIOs notifications should be provided for.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="notifier.html" class="tsd-signature-type">Notifier</a></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="rl" class="tsd-anchor"></a>
-					<h3>rl</h3>
-					<div class="tsd-signature tsd-kind-icon">rl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Interface</span></div>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="notification_length" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> NOTIFICATION_<wbr>LENGTH</h3>
+					<div class="tsd-signature tsd-kind-icon">NOTIFICATION_<wbr>LENGTH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L9">src/Cli.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L407">src/Gpio/GpioFake.ts:407</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The number of bytes occupied by a notification in the notification stream.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="pi_ntfy_flags_alive" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> PI_<wbr>NTFY_<wbr>FLAGS_<wbr>ALIVE</h3>
+					<div class="tsd-signature tsd-kind-icon">PI_<wbr>NTFY_<wbr>FLAGS_<wbr>ALIVE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L412">src/Gpio/GpioFake.ts:412</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Indicates a keep alive signal on the stream and is sent once a minute in the absence of other notification activity.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="closegpio" class="tsd-anchor"></a>
-					<h3>close<wbr>Gpio</h3>
+					<a name="close" class="tsd-anchor"></a>
+					<h3>close</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">close<wbr>Gpio<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="notifier.html" class="tsd-signature-type">Notifier</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L37">src/Cli.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L395">src/Gpio/GpioFake.ts:395</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stops notifications and releases resources.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="notifier.html" class="tsd-signature-type">Notifier</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="initialize" class="tsd-anchor"></a>
-					<h3>initialize</h3>
+					<a name="start" class="tsd-anchor"></a>
+					<h3>start</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span>bits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="notifier.html" class="tsd-signature-type">Notifier</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L45">src/Cli.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L385">src/Gpio/GpioFake.ts:385</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="opengpio" class="tsd-anchor"></a>
-					<h3>open<wbr>Gpio</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">open<wbr>Gpio<span class="tsd-signature-symbol">(</span>pin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, mode<span class="tsd-signature-symbol">: </span><a href="../enums/gpiomode.html" class="tsd-signature-type">GpioMode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L28">src/Cli.ts:28</a></li>
-								</ul>
-							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts notifications for the GPIOs specified in the bit mask.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>pin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>mode: <a href="../enums/gpiomode.html" class="tsd-signature-type">GpioMode</a></h5>
+									<h5>bits: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a bit mask indicating the GPIOs of interest, bit0 corresponds to GPIO0, bit1 corresponds to GPIO1, ..., bit31 corresponds to GPIO31.
+										If a bit is set, the corresponding GPIO will be monitored for state changes.</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="notifier.html" class="tsd-signature-type">Notifier</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="read" class="tsd-anchor"></a>
-					<h3>read</h3>
+					<a name="stop" class="tsd-anchor"></a>
+					<h3>stop</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>pin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="notifier.html" class="tsd-signature-type">Notifier</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L23">src/Cli.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L390">src/Gpio/GpioFake.ts:390</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>pin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stops notifications. Notifications can be restarted with the start method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="notifier.html" class="tsd-signature-type">Notifier</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="write" class="tsd-anchor"></a>
-					<h3>write</h3>
+					<a name="stream" class="tsd-anchor"></a>
+					<h3>stream</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>pin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReadableStream</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Cli.ts#L12">src/Cli.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/GpioFake.ts#L400">src/Gpio/GpioFake.ts:400</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>pin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the notification stream which is a Readable stream.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ReadableStream</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -247,36 +297,9 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/gpiomode.html" class="tsd-kind-icon">Gpio<wbr>Mode</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="cli.html" class="tsd-kind-icon">Cli</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="cli.html#current" class="tsd-kind-icon">current</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="cli.html#rl" class="tsd-kind-icon">rl</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="cli.html#closegpio" class="tsd-kind-icon">close<wbr>Gpio</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="cli.html#initialize" class="tsd-kind-icon">initialize</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="cli.html#opengpio" class="tsd-kind-icon">open<wbr>Gpio</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="cli.html#read" class="tsd-kind-icon">read</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="cli.html#write" class="tsd-kind-icon">write</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="consolegpio.html" class="tsd-kind-icon">Console<wbr>Gpio</a>
 					</li>
@@ -286,9 +309,36 @@
 					<li class=" tsd-kind-class">
 						<a href="gpiobank.html" class="tsd-kind-icon">Gpio<wbr>Bank</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="notifier.html" class="tsd-kind-icon">Notifier</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="notifier.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="notifier.html#notification_length" class="tsd-kind-icon">NOTIFICATION_<wbr>LENGTH</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="notifier.html#pi_ntfy_flags_alive" class="tsd-kind-icon">PI_<wbr>NTFY_<wbr>FLAGS_<wbr>ALIVE</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#close" class="tsd-kind-icon">close</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#start" class="tsd-kind-icon">start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#stop" class="tsd-kind-icon">stop</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="notifier.html#stream" class="tsd-kind-icon">stream</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="raspberrygpio.html" class="tsd-kind-icon">Raspberry<wbr>Gpio</a>
 					</li>
