@@ -2,6 +2,7 @@ import { createInterface, Interface } from "readline";
 import { GpioFactory } from "./Gpio/GpioFactory";
 import { IGpio } from "./Gpio/IGpio";
 import { sleep } from "@dotup/dotup-ts-types";
+import { GpioMode } from "./Gpio/GpioMode";
 
 export class Cli {
 
@@ -9,8 +10,7 @@ export class Cli {
   current: IGpio;
 
   async write(pin: number | string, value: number | string): Promise<void> {
-    this.openGpio(pin);
-    const p = typeof pin === "string" ? Number(pin) : pin;
+    this.openGpio(pin, GpioMode.OUTPUT);
     let v = typeof value === "string" ? Number(value) : value;
     // const gpio = GpioFactory.create(p);
     if (v === undefined) {
@@ -21,16 +21,16 @@ export class Cli {
   }
 
   async read(pin: number | string): Promise<boolean> {
-    this.openGpio(pin);
+    this.openGpio(pin, GpioMode.OUTPUT);
     return await this.current.read();
   }
 
-  openGpio(pin: number | string) {
+  openGpio(pin: number | string, mode: GpioMode) {
     const p = typeof pin === "string" ? Number(pin) : pin;
 
     if (this.current === undefined || this.current.PinNo !== p) {
       this.closeGpio();
-      this.current = GpioFactory.create(p, true, false);
+      this.current = GpioFactory.create(p, mode, false);
     }
   }
 

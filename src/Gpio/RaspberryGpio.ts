@@ -1,18 +1,19 @@
 import { sleep } from "@dotup/dotup-ts-types";
 import { IGpio } from "./IGpio";
 import { Gpio } from "pigpio";
+import { GpioMode } from "./GpioMode";
 
 export class RaspberryGpio implements IGpio {
   // private readonly gpio: Rpio.
   readonly PinNo: number;
   gpio: Gpio;
 
-  constructor(pin: number, activeLow: boolean) {
+  constructor(pin: number, mode: GpioMode) {
     this.PinNo = pin;
     console.info(`RaspberryGpio: Pin ${pin} initialized`);
-    this.gpio = new Gpio(pin,{
-      mode: Gpio.INPUT,
-      pullUpDown: Gpio.PUD_DOWN,      
+    this.gpio = new Gpio(pin, {
+      mode: mode,
+      pullUpDown: Gpio.PUD_DOWN,
     });
   }
 
@@ -42,7 +43,7 @@ export class RaspberryGpio implements IGpio {
 
   dispose(): void {
     console.info(`RaspberryGpio: Pin ${this.PinNo} disposed`);
-    
+
   }
 
 }
