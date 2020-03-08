@@ -1,0 +1,983 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IGpioFake | @dotup/raspberrypi-gpio</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@dotup/raspberrypi-gpio</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="igpiofake.html">IGpioFake</a>
+				</li>
+			</ul>
+			<h1>Interface IGpioFake</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>General Purpose Input Output</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IGpioFake</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="ab.html" class="tsd-signature-type">Ab</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#analogwrite" class="tsd-kind-icon">analog<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#digitalread" class="tsd-kind-icon">digital<wbr>Read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#digitalwrite" class="tsd-kind-icon">digital<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#disablealert" class="tsd-kind-icon">disable<wbr>Alert</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#disableinterrupt" class="tsd-kind-icon">disable<wbr>Interrupt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#enablealert" class="tsd-kind-icon">enable<wbr>Alert</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#enableinterrupt" class="tsd-kind-icon">enable<wbr>Interrupt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getmode" class="tsd-kind-icon">get<wbr>Mode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getpwmdutycycle" class="tsd-kind-icon">get<wbr>Pwm<wbr>Duty<wbr>Cycle</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getpwmfrequency" class="tsd-kind-icon">get<wbr>Pwm<wbr>Frequency</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getpwmrange" class="tsd-kind-icon">get<wbr>Pwm<wbr>Range</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getpwmrealrange" class="tsd-kind-icon">get<wbr>Pwm<wbr>Real<wbr>Range</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#getservopulsewidth" class="tsd-kind-icon">get<wbr>Servo<wbr>Pulse<wbr>Width</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#glitchfilter" class="tsd-kind-icon">glitch<wbr>Filter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#hardwarepwmwrite" class="tsd-kind-icon">hardware<wbr>Pwm<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#mode" class="tsd-kind-icon">mode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#pullupdown" class="tsd-kind-icon">pull<wbr>UpDown</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#pwmfrequency" class="tsd-kind-icon">pwm<wbr>Frequency</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#pwmrange" class="tsd-kind-icon">pwm<wbr>Range</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#pwmwrite" class="tsd-kind-icon">pwm<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#servowrite" class="tsd-kind-icon">servo<wbr>Write</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igpiofake.html#trigger" class="tsd-kind-icon">trigger</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="analogwrite" class="tsd-anchor"></a>
+					<h3>analog<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">analog<wbr>Write<span class="tsd-signature-symbol">(</span>dutyCycle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L87">src/Gpio/IGpioFake.ts:87</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The same to #pwmWrite.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dutyCycle: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer &gt;= 0 (off) and &lt;= range (fully on). range defaults to 255.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="digitalread" class="tsd-anchor"></a>
+					<h3>digital<wbr>Read</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">digital<wbr>Read<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L66">src/Gpio/IGpioFake.ts:66</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the GPIO level, 0 or 1.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="digitalwrite" class="tsd-anchor"></a>
+					<h3>digital<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">digital<wbr>Write<span class="tsd-signature-symbol">(</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L71">src/Gpio/IGpioFake.ts:71</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the GPIO level to 0 or 1. If PWM or servo pulses are active on the GPIO they are switched off.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>0 or 1</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="disablealert" class="tsd-anchor"></a>
+					<h3>disable<wbr>Alert</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">disable<wbr>Alert<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L148">src/Gpio/IGpioFake.ts:148</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Disables aterts for the GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="disableinterrupt" class="tsd-anchor"></a>
+					<h3>disable<wbr>Interrupt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">disable<wbr>Interrupt<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L140">src/Gpio/IGpioFake.ts:140</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Disables interrupts for the GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="enablealert" class="tsd-anchor"></a>
+					<h3>enable<wbr>Alert</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">enable<wbr>Alert<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L144">src/Gpio/IGpioFake.ts:144</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Enables alerts for the GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="enableinterrupt" class="tsd-anchor"></a>
+					<h3>enable<wbr>Interrupt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">enable<wbr>Interrupt<span class="tsd-signature-symbol">(</span>edge<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, timeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L136">src/Gpio/IGpioFake.ts:136</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Enables interrupts for the GPI</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>edge: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>RISING_EDGE, FALLING_EDGE, or EITHER_EDGE</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> timeout: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interrupt timeout in milliseconds (optional, defaults to 0 meaning no timeout)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getmode" class="tsd-anchor"></a>
+					<h3>get<wbr>Mode</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Mode<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L62">src/Gpio/IGpioFake.ts:62</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the GPIO mode.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getpwmdutycycle" class="tsd-anchor"></a>
+					<h3>get<wbr>Pwm<wbr>Duty<wbr>Cycle</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pwm<wbr>Duty<wbr>Cycle<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L97">src/Gpio/IGpioFake.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the PWM duty cycle setting on the GPIO.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getpwmfrequency" class="tsd-anchor"></a>
+					<h3>get<wbr>Pwm<wbr>Frequency</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pwm<wbr>Frequency<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L121">src/Gpio/IGpioFake.ts:121</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the frequency (in hertz) used for the GPIO. The default frequency is 800Hz.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getpwmrange" class="tsd-anchor"></a>
+					<h3>get<wbr>Pwm<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pwm<wbr>Range<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L107">src/Gpio/IGpioFake.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the duty cycle range used for the GPIO.
+									If hardware PWM is active on the GPIO the reported range will be 1000000.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getpwmrealrange" class="tsd-anchor"></a>
+					<h3>get<wbr>Pwm<wbr>Real<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Pwm<wbr>Real<wbr>Range<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L112">src/Gpio/IGpioFake.ts:112</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the real range used for the GPIO.
+									If hardware PWM is active on the GPIO the reported real range will be approximately 250M divided by the set PWM frequency.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getservopulsewidth" class="tsd-anchor"></a>
+					<h3>get<wbr>Servo<wbr>Pulse<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Servo<wbr>Pulse<wbr>Width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L130">src/Gpio/IGpioFake.ts:130</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the servo pulse width setting on the GPIO.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="glitchfilter" class="tsd-anchor"></a>
+					<h3>glitch<wbr>Filter</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">glitch<wbr>Filter<span class="tsd-signature-symbol">(</span>steady<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L153">src/Gpio/IGpioFake.ts:153</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a glitch filter on a GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>steady: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Time, in microseconds, during which the level must be stable. Maximum value: 300000</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="hardwarepwmwrite" class="tsd-anchor"></a>
+					<h3>hardware<wbr>Pwm<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">hardware<wbr>Pwm<wbr>Write<span class="tsd-signature-symbol">(</span>frequency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dutyCycle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L93">src/Gpio/IGpioFake.ts:93</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts hardware PWM on the GPIO at the specified frequency and dutyCycle. Frequencies above 30MHz are unlikely to work.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>frequency: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer &gt;= 0 and &lt;= 125000000</p>
+									</div>
+								</li>
+								<li>
+									<h5>dutyCycle: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer &gt;= 0 (off) and &lt;= 1000000 (fully on).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="mode" class="tsd-anchor"></a>
+					<h3>mode</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">mode<span class="tsd-signature-symbol">(</span>mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L53">src/Gpio/IGpioFake.ts:53</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the GPIO mode.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>mode: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>INPUT, OUTPUT, ALT0, ALT1, ALT2, ALT3, ALT4, or ALT5</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pullupdown" class="tsd-anchor"></a>
+					<h3>pull<wbr>UpDown</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pull<wbr>UpDown<span class="tsd-signature-symbol">(</span>pud<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L58">src/Gpio/IGpioFake.ts:58</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets or clears the resistor pull type for the GPIO.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pud: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>PUD_OFF, PUD_DOWN, or PUD_UP</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pwmfrequency" class="tsd-anchor"></a>
+					<h3>pwm<wbr>Frequency</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pwm<wbr>Frequency<span class="tsd-signature-symbol">(</span>frequency<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L117">src/Gpio/IGpioFake.ts:117</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the frequency in hertz to be used for the GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>frequency: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer &gt;= 0</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pwmrange" class="tsd-anchor"></a>
+					<h3>pwm<wbr>Range</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pwm<wbr>Range<span class="tsd-signature-symbol">(</span>range<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L102">src/Gpio/IGpioFake.ts:102</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Selects the duty cycle range to be used for the GPIO. Subsequent calls to pwmWrite will use a duty cycle between 0 (off) and range (fully on).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>range: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer in the range 25 through 40000</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="pwmwrite" class="tsd-anchor"></a>
+					<h3>pwm<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">pwm<wbr>Write<span class="tsd-signature-symbol">(</span>dutyCycle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L82">src/Gpio/IGpioFake.ts:82</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts PWM on the GPIO. Returns this.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dutyCycle: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>an unsigned integer &gt;= 0 (off) and &lt;= range (fully on). range defaults to 255.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="servowrite" class="tsd-anchor"></a>
+					<h3>servo<wbr>Write</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">servo<wbr>Write<span class="tsd-signature-symbol">(</span>pulseWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L126">src/Gpio/IGpioFake.ts:126</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Starts servo pulses at 50Hz on the GPIO, 0 (off), 500 (most anti-clockwise) to 2500 (most clockwise)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pulseWidth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>pulse width in microseconds, an unsigned integer, 0 or a number in the range 500 through 2500</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="trigger" class="tsd-anchor"></a>
+					<h3>trigger</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">trigger<span class="tsd-signature-symbol">(</span>pulseLen<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/IGpioFake.ts#L77">src/Gpio/IGpioFake.ts:77</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sends a trigger pulse to the GPIO. The GPIO is set to level for pulseLen microseconds and then reset to not level.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pulseLen: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>pulse length in microseconds (1 - 100)</p>
+									</div>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>0 or 1</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="igpiofake.html" class="tsd-signature-type">IGpioFake</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/gpiomode.html" class="tsd-kind-icon">Gpio<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/gpiopullmode.html" class="tsd-kind-icon">Gpio<wbr>Pull<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/cli.html" class="tsd-kind-icon">Cli</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/consolegpio.html" class="tsd-kind-icon">Console<wbr>Gpio</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/gpio.html" class="tsd-kind-icon">Gpio</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/gpiobank.html" class="tsd-kind-icon">Gpio<wbr>Bank</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/notifier.html" class="tsd-kind-icon">Notifier</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/raspberrygpio.html" class="tsd-kind-icon">Raspberry<wbr>Gpio</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="ab.html" class="tsd-kind-icon">Ab</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="igpio.html" class="tsd-kind-icon">IGpio</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="igpiobank.html" class="tsd-kind-icon">IGpio<wbr>Bank</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="igpiofake.html" class="tsd-kind-icon">IGpio<wbr>Fake</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#analogwrite" class="tsd-kind-icon">analog<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#digitalread" class="tsd-kind-icon">digital<wbr>Read</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#digitalwrite" class="tsd-kind-icon">digital<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#disablealert" class="tsd-kind-icon">disable<wbr>Alert</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#disableinterrupt" class="tsd-kind-icon">disable<wbr>Interrupt</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#enablealert" class="tsd-kind-icon">enable<wbr>Alert</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#enableinterrupt" class="tsd-kind-icon">enable<wbr>Interrupt</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getmode" class="tsd-kind-icon">get<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getpwmdutycycle" class="tsd-kind-icon">get<wbr>Pwm<wbr>Duty<wbr>Cycle</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getpwmfrequency" class="tsd-kind-icon">get<wbr>Pwm<wbr>Frequency</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getpwmrange" class="tsd-kind-icon">get<wbr>Pwm<wbr>Range</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getpwmrealrange" class="tsd-kind-icon">get<wbr>Pwm<wbr>Real<wbr>Range</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#getservopulsewidth" class="tsd-kind-icon">get<wbr>Servo<wbr>Pulse<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#glitchfilter" class="tsd-kind-icon">glitch<wbr>Filter</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#hardwarepwmwrite" class="tsd-kind-icon">hardware<wbr>Pwm<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#mode" class="tsd-kind-icon">mode</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#pullupdown" class="tsd-kind-icon">pull<wbr>UpDown</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#pwmfrequency" class="tsd-kind-icon">pwm<wbr>Frequency</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#pwmrange" class="tsd-kind-icon">pwm<wbr>Range</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#pwmwrite" class="tsd-kind-icon">pwm<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#servowrite" class="tsd-kind-icon">servo<wbr>Write</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igpiofake.html#trigger" class="tsd-kind-icon">trigger</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="igpiofakeconstructor.html" class="tsd-kind-icon">IGpio<wbr>Fake<wbr>Constructor</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="inotifier.html" class="tsd-kind-icon">INotifier</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#clock_pcm" class="tsd-kind-icon">CLOCK_<wbr>PCM</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#clock_pwm" class="tsd-kind-icon">CLOCK_<wbr>PWM</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#args" class="tsd-kind-icon">args</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#cli" class="tsd-kind-icon">cli</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#pin" class="tsd-kind-icon">pin</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#read" class="tsd-kind-icon">read</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#write" class="tsd-kind-icon">write</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#configureclock" class="tsd-kind-icon">configure<wbr>Clock</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#configuresocketport" class="tsd-kind-icon">configure<wbr>Socket<wbr>Port</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#gettick" class="tsd-kind-icon">get<wbr>Tick</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#hardwarerevision" class="tsd-kind-icon">hardware<wbr>Revision</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#initialize" class="tsd-kind-icon">initialize</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#terminate" class="tsd-kind-icon">terminate</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#tickdiff" class="tsd-kind-icon">tick<wbr>Diff</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="../globals.html#environment" class="tsd-kind-icon">Environment</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="../globals.html#gpiofactory" class="tsd-kind-icon">Gpio<wbr>Factory</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

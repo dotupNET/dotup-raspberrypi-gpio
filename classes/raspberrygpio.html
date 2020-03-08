@@ -116,13 +116,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Raspberry<wbr>Gpio<span class="tsd-signature-symbol">(</span>pin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><a href="../enums/gpiomode.html" class="tsd-signature-type">GpioMode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="raspberrygpio.html" class="tsd-signature-type">RaspberryGpio</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Raspberry<wbr>Gpio<span class="tsd-signature-symbol">(</span>pin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mode<span class="tsd-signature-symbol">: </span><a href="../enums/gpiomode.html" class="tsd-signature-type">GpioMode</a>, pullMode<span class="tsd-signature-symbol">?: </span><a href="../enums/gpiopullmode.html" class="tsd-signature-type">GpioPullMode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="raspberrygpio.html" class="tsd-signature-type">RaspberryGpio</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L15">src/Gpio/RaspberryGpio.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L17">src/Gpio/RaspberryGpio.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -132,6 +132,9 @@
 								</li>
 								<li>
 									<h5>mode: <a href="../enums/gpiomode.html" class="tsd-signature-type">GpioMode</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> pullMode: <a href="../enums/gpiopullmode.html" class="tsd-signature-type">GpioPullMode</a><span class="tsd-signature-symbol"> = GpioPullMode.PUD_OFF</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="raspberrygpio.html" class="tsd-signature-type">RaspberryGpio</a></h4>
@@ -148,17 +151,17 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#pinno">PinNo</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L14">src/Gpio/RaspberryGpio.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L16">src/Gpio/RaspberryGpio.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="gpio" class="tsd-anchor"></a>
 					<h3>gpio</h3>
-					<div class="tsd-signature tsd-kind-icon">gpio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<div class="tsd-signature tsd-kind-icon">gpio<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ab.html" class="tsd-signature-type">Ab</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L15">src/Gpio/RaspberryGpio.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L17">src/Gpio/RaspberryGpio.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -176,7 +179,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#dispose">dispose</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L50">src/Gpio/RaspberryGpio.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L53">src/Gpio/RaspberryGpio.ts:53</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -194,7 +197,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#off">off</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L37">src/Gpio/RaspberryGpio.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L40">src/Gpio/RaspberryGpio.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -213,7 +216,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#on">on</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L26">src/Gpio/RaspberryGpio.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L29">src/Gpio/RaspberryGpio.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -222,7 +225,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#on">on</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L28">src/Gpio/RaspberryGpio.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L31">src/Gpio/RaspberryGpio.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -246,7 +249,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#read">read</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L45">src/Gpio/RaspberryGpio.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L48">src/Gpio/RaspberryGpio.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -264,7 +267,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/igpio.html">IGpio</a>.<a href="../interfaces/igpio.html#set">set</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/9ba61aa/src/Gpio/RaspberryGpio.ts#L41">src/Gpio/RaspberryGpio.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/dotupNET/dotup-raspberrypi-gpio/blob/def1ab8/src/Gpio/RaspberryGpio.ts#L44">src/Gpio/RaspberryGpio.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,6 +294,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-enum">
 						<a href="../enums/gpiomode.html" class="tsd-kind-icon">Gpio<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/gpiopullmode.html" class="tsd-kind-icon">Gpio<wbr>Pull<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="cli.html" class="tsd-kind-icon">Cli</a>
@@ -341,7 +347,22 @@
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ab.html" class="tsd-kind-icon">Ab</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/igpio.html" class="tsd-kind-icon">IGpio</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/igpiobank.html" class="tsd-kind-icon">IGpio<wbr>Bank</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/igpiofake.html" class="tsd-kind-icon">IGpio<wbr>Fake</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/igpiofakeconstructor.html" class="tsd-kind-icon">IGpio<wbr>Fake<wbr>Constructor</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/inotifier.html" class="tsd-kind-icon">INotifier</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#clock_pcm" class="tsd-kind-icon">CLOCK_<wbr>PCM</a>
