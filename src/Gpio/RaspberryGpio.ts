@@ -6,6 +6,10 @@ import { Ab } from "./IGpioFake";
 // import { Gpio } from "./GpioFake";
 import { Gpio as pigpio } from "pigpio";
 import { GpioPullMode } from "./GpioPullMode";
+
+const PIN_ON = 0;
+const PIN_OFF = 1;
+
 const Gpio: Ab = Environment.isPi() ?
   require("pigpio").Gpio :
   require("./GpioFake")
@@ -30,7 +34,7 @@ export class RaspberryGpio implements IGpio {
   // tslint:disable-next-line: unified-signatures
   async on(durationMs: number): Promise<void>;
   async on(durationMs?: number): Promise<void> {
-    await this.gpio.digitalWrite(1);
+    await this.gpio.digitalWrite(PIN_ON);
     if (durationMs !== undefined) {
       await sleep(durationMs);
       await this.off();
@@ -38,16 +42,16 @@ export class RaspberryGpio implements IGpio {
   }
 
   async off(): Promise<void> {
-    await this.gpio.digitalWrite(0);
+    await this.gpio.digitalWrite(PIN_OFF);
   }
 
   async set(value: number): Promise<void> {
-    await this.gpio.digitalWrite(value === 0 ? 0 : 1);
+    await this.gpio.digitalWrite(value === PIN_OFF ? PIN_OFF : PIN_ON);
   }
 
   async read(): Promise<boolean> {
     const result = await this.gpio.digitalRead();
-    return result === 1;
+    return result === PIN_ON;
   }
 
   dispose(): void {

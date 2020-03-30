@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "@dotup/raspberrypi-gpio",
   "scripts": {
     "build": "npm run build-ts",
